@@ -2,6 +2,7 @@ version: '3.8'
 
 services:
   node1:
+    build: .
     image: gluster-arm
     container_name: node1
     privileged: true
@@ -13,6 +14,7 @@ services:
     tty: true
 
   node2:
+    build: .
     image: gluster-arm
     container_name: node2
     privileged: true
@@ -24,6 +26,7 @@ services:
     tty: true
 
   node3:
+    build: .
     image: gluster-arm
     container_name: node3
     privileged: true
@@ -35,6 +38,7 @@ services:
     tty: true
 
   node4:
+    build: .
     image: gluster-arm
     container_name: node4
     privileged: true
