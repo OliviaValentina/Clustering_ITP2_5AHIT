@@ -3,50 +3,46 @@ version: '3.8'
 services:
   node1:
     build: .
-    image: gluster-arm
+    image: my-gluster-cluster-x64  
     container_name: node1
     privileged: true
     volumes:
       - node1-brick:/data/brick
     networks:
       - gluster-net
-    command: ["/usr/sbin/glusterd", "-N"]
     tty: true
 
   node2:
     build: .
-    image: gluster-arm
+    image: my-gluster-cluster-x64 
     container_name: node2
     privileged: true
     volumes:
       - node2-brick:/data/brick
     networks:
       - gluster-net
-    command: ["/usr/sbin/glusterd", "-N"]
     tty: true
 
   node3:
     build: .
-    image: gluster-arm
+    image: my-gluster-cluster-x64  
     container_name: node3
     privileged: true
     volumes:
       - node3-brick:/data/brick
     networks:
       - gluster-net
-    command: ["/usr/sbin/glusterd", "-N"]
     tty: true
 
   node4:
     build: .
-    image: gluster-arm
+    image: my-gluster-cluster-x64  
     container_name: node4
     privileged: true
     volumes:
       - node4-brick:/data/brick
     networks:
       - gluster-net
-    command: ["/usr/sbin/glusterd", "-N"]
     tty: true
 
 volumes:
